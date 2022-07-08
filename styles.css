@@ -15,6 +15,8 @@ html{
 
 body{
     padding: 20px;
+    display: grid;
+    grid-row-gap: 12px;
 }
 
 header{
@@ -24,7 +26,7 @@ header{
     font-family: var(--font-title);
     font-weight: bold;
     border: 1px solid black;
-    max-width: 520px;
+    max-width: 350px;
     margin: 0 auto;
 }
 
@@ -35,7 +37,7 @@ header .header-number{
     background-color: black;
     color: white;
     font-size: 5rem;
-    padding-bottom: 10px;
+    padding-bottom: 1rem;
 }
 
 header .header-title{
@@ -52,4 +54,41 @@ header .header-sub_title{
     justify-content: center;
     align-items: center;
 }
+
+/* sección principal */
+
+main{
+    display: grid;
+    grid-template-columns: 70% 30%; 
+    max-width: 350px;
+    margin: 0 auto;
+    grid-template-rows: repeat(5, 100px);
+    grid-row-gap: 12px;
+
+}
+
+main .image {
+    grid-row: 1 / 6;
+    grid-column: 1 / 2;
+}
+
+
+main .image img{
+    width: 250px;
+    height: 520px;
+}
+
+main .text{
+    grid-row: 2 / 6;
+    grid-column: 2 / 3;
+    font-size: 0.8rem;
+    font-family: var(--font-text);
+    font-weight: 300;
+}
+
+main .image-description{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 0;
 }
