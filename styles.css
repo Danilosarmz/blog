@@ -15,20 +15,19 @@ html{
 
 body{
     padding: 20px;
-    display: grid;
-    grid-row-gap: 12px;
 }
 
 header{
     display: grid;
     grid-template-columns: 20% auto 6%;
-    height: 100px;
+    height: 80px;
     font-family: var(--font-title);
     font-weight: bold;
     border: 1px solid black;
-    max-width: 350px;
-    margin: 0 auto;
+    max-width: 385px;
+    margin: 0 auto 12px auto;
 }
+
 
 header .header-number{
     display: flex;
@@ -41,9 +40,9 @@ header .header-number{
 }
 
 header .header-title{
-    font-size: 4rem;
+    font-size: 3rem;
     padding-left: 20px;
-    line-height: 45px;
+    line-height: 38px;
 }
 
 header .header-sub_title{
@@ -53,6 +52,7 @@ header .header-sub_title{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 0.8rem;
 }
 
 /* sección principal */
@@ -60,11 +60,24 @@ header .header-sub_title{
 main{
     display: grid;
     grid-template-columns: 70% 30%; 
-    max-width: 350px;
+    max-width: 375px;
     margin: 0 auto;
-    grid-template-rows: repeat(5, 100px);
+    grid-template-rows: repeat(6, 100px);
     grid-row-gap: 12px;
+    position: relative;
 
+}
+
+.introduction{
+    position: absolute;
+    top: 22%;
+    left: 41%;
+    max-width: 200px;
+    font-family: var(--font-text);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.7rem;
+    z-index: 1;
 }
 
 main .image {
@@ -74,8 +87,12 @@ main .image {
 
 
 main .image img{
-    width: 250px;
+    width: 230px;
     height: 520px;
+    border-left: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    padding: 0;
+    margin: 0;
 }
 
 main .text{
@@ -84,11 +101,19 @@ main .text{
     font-size: 0.8rem;
     font-family: var(--font-text);
     font-weight: 300;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
 }
 
 main .image-description{
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    padding: 0;
+   padding-left: 7px;
+   font-size: 0.9rem;
+}
+
+main .text2{
+    grid-row: 6 / 7;
+    grid-column: 1 / 3;
+    font-size: 0.8rem;
+    font-family: var(--font-text);
+    font-weight: 300;
 }
